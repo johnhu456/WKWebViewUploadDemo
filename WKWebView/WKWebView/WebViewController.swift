@@ -88,8 +88,13 @@ class WebViewController: NSViewController, WKUIDelegate, WKNavigationDelegate {
     @available(OSX 10.12, *)
     func webView(_ webView: WKWebView, runOpenPanelWith parameters: WKOpenPanelParameters, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping ([URL]?) -> Void) {
         let pandel = NSOpenPanel();
+        pandel.allowsMultipleSelection = true;
         if pandel .runModal() == NSModalResponseOK {
             completionHandler(pandel.urls)
+        }
+        else
+        {
+            completionHandler(nil)
         }
     }
     
