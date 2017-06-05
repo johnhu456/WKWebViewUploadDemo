@@ -127,9 +127,11 @@ class WebViewController: NSViewController, WKUIDelegate, WKNavigationDelegate {
             anchor.isActive = true
         }  // end forEach
         // let myURL = URL(string: "http://localhost:8042")
-        let myURL = URL(string: "https://www.baidu.com/")
+//        let testPath =  Bundle.main.path(forResource: "test", ofType: "html")
+        let testPath = "https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_fileupload_create"
+        let myURL = URL(string: testPath)
         let myRequest = URLRequest(url: myURL!)
         myWebView.load(myRequest)
-    }  // end func        
+    }  // end func
     
 }  // end class

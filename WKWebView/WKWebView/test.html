@@ -1,0 +1,22 @@
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <script> 
+  function  handleFiles(files)  
+  {  
+    if(files.length)  
+    {  
+       var file = files[0];  
+       console.log(file);
+    }  
+  } 
+  </script>  
+</head>
+    <body>
+       <form action="">
+            <input type='file' onchange="handleFiles(this.file)">
+            <input type="submit" value="Submit">
+       </form>
+       <div id="filecontent"></div>  
+    </body>
+<html>
